@@ -1,4 +1,4 @@
-package com.github.dwiechert
+package com.github.dwiechert.chapter2
 
 import org.apache.spark.SparkContext
 import org.apache.spark.SparkContext._
@@ -9,7 +9,7 @@ import org.apache.spark.SparkConf
  * <p/>
  * To run:
  *   sbt package
- *   spark-submit --class "com.github.dwiechert.LetterCount" target/scala-2.11/learning-spark_2.11-0.1.jar
+ *   spark-submit --class "com.github.dwiechert.chapter2.LetterCount" target/scala-2.11/learning-spark_2.11-0.1.jar
  */
 object LetterCount {
   def main(args: Array[String]) {
