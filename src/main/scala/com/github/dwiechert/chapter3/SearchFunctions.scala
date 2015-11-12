@@ -1,8 +1,6 @@
 package com.github.dwiechert.chapter3
 
-import org.apache.spark.SparkContext
-import org.apache.spark.SparkContext._
-import org.apache.spark.SparkConf
+import org.apache.spark.rdd.RDD
 
 class SearchFunctions(val query: String) {
   def isMatch(s: String): Boolean = {
@@ -21,6 +19,7 @@ class SearchFunctions(val query: String) {
 
   def getMatchesNoReference(rdd: RDD[String]): RDD[Array[String]] = {
     // Safe: extract just the field we need into a local variable
-    val query_ = this.queryrdd.map(x => x.split(query_))
+    val query_ = this.query
+    rdd.map(x => x.split(query_))
   }
 }
