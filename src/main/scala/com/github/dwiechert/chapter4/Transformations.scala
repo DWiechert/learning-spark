@@ -8,9 +8,9 @@ import org.apache.spark.SparkConf
  * <p/>
  * To run:
  *   sbt package
- *   spark-submit --class "com.github.dwiechert.chapter4.Aggregations" target/scala-2.11/learning-spark_2.11-0.1.jar
+ *   spark-submit --class "com.github.dwiechert.chapter4.Transformations" target/scala-2.11/learning-spark_2.11-0.1.jar
  */
-object Aggregations {
+object Transformations {
   def main(args: Array[String]) {
     val logFile = System.getenv("SPARK_HOME") + "/README.md" // Should be some file on your system
     val conf = new SparkConf().setAppName("Letter Count Application")
